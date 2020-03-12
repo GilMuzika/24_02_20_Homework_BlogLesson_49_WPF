@@ -1,0 +1,36 @@
+﻿<Window x:Class="_24_02_20_Homework_BlogLesson_49_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_24_02_20_Homework_BlogLesson_49_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="372" Width="504">
+    <Grid Height="370" Margin="0,0,14,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="463*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox HorizontalAlignment="Left" Margin="21,96,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="txtNumber1" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Margin="21,138,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" x:Name="txtNumber2" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" Margin="21,34,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" x:Name="tblResult" Grid.Column="1"/>
+        <Button Content="Sum" HorizontalAlignment="Left" Margin="21,175,0,0" VerticalAlignment="Top" x:Name="btnSum" Grid.Column="1"/>
+        <ComboBox x:Name="cmbMyComboBox" HorizontalAlignment="Left"  VerticalAlignment="Bottom" Margin="219,0,0,331" Width="232" Grid.Column="1">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}" Margin="10 0 0 0"/>
+                        <TextBlock Text="{Binding Capital}"/>
+                        <Image Source="{Binding flag_path}" Width="80"/>
+
+
+
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+
+        </ComboBox>
+
+    </Grid>
+</Window>
